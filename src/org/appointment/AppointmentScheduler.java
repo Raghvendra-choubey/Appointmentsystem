@@ -10,7 +10,7 @@ public class AppointmentScheduler {
 	public Appointment getAppointment(Patient p, List<Doctor> l) {
 		Appointment A = null;
 		Doctor d = null;
-		Iterator itr = l.iterator();
+		Iterator<Doctor> itr = l.iterator();
 		while (itr.hasNext()) {
 			d = (Doctor) itr.next();
 			if (d.isAvailability()) {
@@ -18,8 +18,6 @@ public class AppointmentScheduler {
 				
 			}
 		}
-
 		return A;
 	}
-
 }

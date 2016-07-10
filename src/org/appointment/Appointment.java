@@ -14,7 +14,7 @@ public class Appointment implements Runnable {
 		
 		int level = patient.getCritical_level();
 		
-		doc.setAvailability(false);
+		doc.setAvailability(false, level);
 		doc.setNo_of_patients(1);
 		doc.setTime_taken(level);
 	
